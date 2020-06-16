@@ -3,14 +3,16 @@
           <!-- Blog Search Well -->
           <div class="well">
             <h4>Blog Search</h4>
+            <form action="search.php" method="POST">
             <div class="input-group">
-              <input type="text" class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">
-                  <span class="glyphicon glyphicon-search"></span>
-                </button>
-              </span>
-            </div>
+                <input type="text" class="form-control" placeholder="search" name="search">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+              </div>
+            </form>
             <!-- /.input-group -->
           </div>
 
@@ -21,9 +23,9 @@
               <div class="col-lg-6">
                 <ul class="list-unstyled">
                   <?php
-                    foreach($cats as $cat){
-                      echo "<li><a href='#'>$cat</a></li>";
-                    };
+                  foreach ($cats as $cat) {
+                    echo "<li><a href='#'>$cat</a></li>";
+                  };
                   ?>
                 </ul>
               </div>

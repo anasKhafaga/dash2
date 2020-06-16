@@ -1,4 +1,5 @@
  <?php include "includes/functions.php"; ?>
+ <?php include "env.php" ;?>
 <!DOCTYPE html>
 <html lang="en">
 

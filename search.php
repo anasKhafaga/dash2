@@ -11,14 +11,18 @@
         <div class="col-md-8">
 
             <h1 class="page-header">
-                Timeline
+                Results
             </h1>
 
             <!-- Blog Post Blueprint -->
             <?php
-
-                $posts = getPosts();
-                foreach($posts as $post){
+              if (isset($_POST["search"]) && $_POST["search"]) {
+                $searchPosts = findPost($_POST["search"]);
+                
+                if(!$searchPosts){
+                  echo "<h2>No Result</h2>";
+                }else{
+                foreach($searchPosts as $post){
                     foreach($post as $key => $value){
                         $$key = $value;
                     };
@@ -39,8 +43,11 @@
 
                         <hr>
                     ";
+                  };
                 };
-                
+              }else {
+                header("Location: {$_ENV['Domain']}");
+              };
             ?>
 
         </div>
