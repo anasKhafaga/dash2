@@ -24,7 +24,7 @@
                 <ul class="list-unstyled">
                   <?php
                   foreach ($cats as $cat) {
-                    echo "<li><a href='#'>$cat</a></li>";
+                    echo "<li><a href='/dash/posts.php?category=$cat'>$cat</a></li>";
                   };
                   ?>
                 </ul>

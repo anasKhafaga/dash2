@@ -41,3 +41,27 @@ function findPost($search) {
   };
   return $arr;
 };
+
+function catPosts($cat){
+  global $connection;
+  $arr = [];
+  $cat = mysqli_real_escape_string($connection, $cat);
+  $query = "SELECT * FROM `posts` WHERE `category` = '$cat'";
+  $cursor = mysqli_query($connection, $query);
+  while($row = mysqli_fetch_assoc($cursor)){
+    array_push($arr, $row);
+  };
+  if(!$arr){
+    return null;
+  };
+  return $arr;
+};
+
+function getPost($id){
+  global $connection;
+  $id = mysqli_real_escape_string($connection, $id);
+  $query = "SELECT * FROM `posts` WHERE `id` = '$id'";
+  $cursor = mysqli_query($connection, $query);
+  $row = mysqli_fetch_assoc($cursor);
+  return $row;
+};

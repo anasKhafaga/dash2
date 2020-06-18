@@ -128,10 +128,10 @@
         <a href="javascript:;" data-toggle="collapse" data-target="#posts"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
         <ul id="posts" class="collapse">
           <li>
-            <a href="#">My Posts</a>
+            <a href="all-posts.php">All Posts</a>
           </li>
           <li>
-            <a href="#">Create a post</a>
+            <a href="add-post.php">Create a Post</a>
           </li>
         </ul>
       </li>
@@ -139,10 +139,10 @@
         <a href="javascript:;" data-toggle="collapse" data-target="#posts"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
         <ul id="posts" class="collapse">
           <li>
-            <a href="#">My Posts</a>
+            <a href="#">All Posts</a>
           </li>
           <li>
-            <a href="#">Create a post</a>
+            <a href="#">Create a Post</a>
           </li>
         </ul>
       </li>

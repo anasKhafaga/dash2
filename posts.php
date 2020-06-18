@@ -2,6 +2,16 @@
 <!-- Navigation -->
 <?php include "includes/nav.php"; ?>
 
+<?php 
+  if(!$_GET["category"]){
+    header("Location: index.php");
+  };
+  $posts = catPosts($_GET["category"]);
+  if(!$posts){
+    header("Location: index.php");
+  };
+?>
+
 <!-- Page Content -->
 <div class="container">
 
@@ -11,13 +21,11 @@
         <div class="col-md-8">
 
             <h1 class="page-header">
-                Timeline
+                <?php print($_GET["category"]); ?>
             </h1>
 
             <!-- Blog Post Blueprint -->
             <?php
-
-                $posts = getPosts();
                 foreach($posts as $post){
                     foreach($post as $key => $value){
                         $$key = $value;
